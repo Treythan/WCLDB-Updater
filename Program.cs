@@ -25,12 +25,12 @@ class Program
         using (var watcher = new ManagementEventWatcher(query))
         {
             ManagementBaseObject e = watcher.WaitForNextEvent();
-            CreateDB();
+            FetchDB();
             Listen();
         }
     }
 
-    static void CreateDB()
+    static void FetchDB()
     {
         string baseURL = "https://sheets.googleapis.com";
 
